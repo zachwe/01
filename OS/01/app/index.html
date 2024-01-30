@@ -48,7 +48,7 @@
         async function startRecording() {
             //const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             audioChunks = [];
-            mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
+            mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm;codec=vorbis" });
             mediaRecorder.ondataavailable = event => {
                 audioChunks.push(event.data);
             };
