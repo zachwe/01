@@ -1,0 +1,11 @@
+[Unit]
+Description=My Custom Startup Service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/zachwe/code/01/OS/01/audio/audio-local/startup_sequence.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
